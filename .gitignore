@@ -1,0 +1,23 @@
+*.[oa]
+*.a # 忽略所有 .a 结尾的文件
+!lib.a # 但 lib.a 除外
+/TODO # 仅仅忽略项目根目录下的 TODO 文件,不包括 subdir/TODO
+build/ # 忽略 build/ 目录下的所有文件
+doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+
+# no .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in the build/ directory
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory
